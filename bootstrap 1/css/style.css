@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+
+:root{
+    --orange:#b36b41;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:10; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--orange);
+    color:hwb(20 14% 24%);
+}
+
+html{
+    font-size: 50%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar-track{
+background: hwb(20 14% 24%);
+
+}
+
+html::-webkit-scrollbar-thumb{
+     background:var(--orange);
+}
+
+
+body{
+    background: hwb(0 98% 1%);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 3rem;
+}
+header{
+position: fixed;
+top: 0; left: 0;
+z-index: 1000;
+height: 100%;
+width: 40rem;
+background: hwb(20 14% 24%);
+display:flow-root;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+text-align: center;
+}
+header .user img{
+    height: 22rem;
+    width: 22rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0rem;
+    border: 1rem solid var(--orange);
+}
+
+
+header .navbar{
+    width: 93%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 10rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: hwb(20 14% 24%);
+    color: azure;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background: var(--orange);
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#fff;
+    color:black;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.ABOUT{
+    display: flex;
+    justify-content:  center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+.ABOUT h3{
+    font-size: 10rem;
+    color: hsl(240, 7%, 26%);
+}
+.ABOUT h3{
+    font-size:10rem;
+    color: hwb(20 14% 24%);
+}
+.ABOUT p{
+    font-size: 2rem;
+    color: black;
+}
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:991px){
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+header.toggle{
+    left: 0%;
+}
+}
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+}
+@media(max-width:400px){
+    header{
+        width:100vw;
+    }
+}
